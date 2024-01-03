@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="styleSheet" href="deskboard_styles.css" />
+</head>
+
+<body>
+
+
+    <div class="outer-div">
+        <div class="inner-div">
+            <button id="addTask" class="open-button">Create</button>
+            <hr>
+            <div>
+                <select id="myList" onchange="favTutorial()" style="float: right; padding: 5px;">
+                    <option class="status"> Filter </option>
+                    <option class="status"> Todo </option>
+                    <option> Progess </option>
+                    <option> Testing </option>
+                    <option> Review </option>
+                    <option> Done </option>
+
+                </select>
+            </div>
+            <div id="showDiv">
+                <h2 id="">Task List</h2>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Task Name</th>
+                            <th>Description</th>
+                            <th>Status</th>
+                            <th>User</th>
+                        </tr>
+                    </thead>
+                    <tbody id="taskTableBody">
+                        <!-- Task data will be inserted here dynamically using JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+
+
+        <div class="form-popup" id="myForm">
+            <form id="addTaskForm" class="form-container">
+                <h1>Task</h1>
+
+                <label for="taskname"><b>Task Name</b></label>
+                <br>
+                <input type="text" id="taskname" placeholder="Task" name="taskname" required style="width: 270px;">
+                <br>
+                <label for="psw"><b>Task Description</b></label>
+                <br>
+
+                <input type="text" id="description" placeholder="Description" name="psw" required
+                    style="height: 120px ; width: 270px;">
+
+                <button  id="savebtn" class="btn" >Save</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+
+    </div>
+
+    <script src="deskboard_script.js">
+
+    </script>
+
+</body>
+
+</html>

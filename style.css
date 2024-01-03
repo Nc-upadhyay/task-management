@@ -1,0 +1,85 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('') center/cover no-repeat;
+    /* Replace 'background-image.jpg' with your image file */
+}
+
+#container {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 400px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 8px;
+    display: block;
+    text-align: left;
+}
+
+input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+input:active {
+    color: red;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.toggle-form {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+
+.toggle-form:hover {
+    color: #333;
+}
+
+.signInAndUpBlue {
+    color: blue;
+    text-decoration: underline;
+}
