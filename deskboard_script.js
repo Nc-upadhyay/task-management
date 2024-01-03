@@ -2,7 +2,7 @@ const url = "http:localhost:8080/home";
 function favTutorial() {
     var mylist = document.getElementById("myList");
     // document.getElementById("favourite").value = mylist.options[mylist.selectedIndex].text;
-    const status=document.getElementById("myList").value;  
+    const status = document.getElementById("myList").value;
     console.log(status);
     filterTask(status)
 
@@ -137,17 +137,19 @@ function filterTask(status) {
 
         })
         .then(data => {
-                displayTaskData(data);
+            displayTaskData(data);
         }).catch(errro => {
             console.error('Error:', error);
             alert('An error occurred. Please try again later.');
         })
 
 }
-function displayTaskData(data){
+function displayTaskData(data) {
     var tableBody = document.getElementById("taskTableBody");
     tableBody.innerHTML = '';
-    data.forEach(task => {
+    const jsonData = '[{"id":1,"taskname":"study","description":"this is study description","status":"todo","user":1},{"id":2,"taskname":"task 2","description":"task 2 description","status":"todo","user":1},{"id":3,"taskname":"task 2","description":"task 2 description","status":"todo","user":1},{"id":52,"taskname":"task 3","description":"task 3 description","status":"todo","user":1},{"id":54,"taskname":"task 4","description":"task 4 description","status":"progress","user":1},{"id":55,"taskname":"task 5","description":"task 5 description","status":"progress","user":1},{"id":56,"taskname":"task 6","description":"task 6 description","status":"progress","user":1},{"id":57,"taskname":"task 7","description":"task 7 description","status":"progress","user":1},{"id":102,"taskname":"task 7","description":"task 7 description","status":"progress","user":1},{"id":103,"taskname":"task 8","description":"task 8 description","status":"progress","user":1},{"id":152,"taskname":"task 7","description":"task 7 description","status":"progress","user":1}]';
+    const dataArray = JSON.parse(jsonData);
+    dataArray.forEach(task => {
         var row = tableBody.insertRow();
         row.insertCell(0).textContent = task.id;
         row.insertCell(1).textContent = task.taskname;
@@ -156,3 +158,4 @@ function displayTaskData(data){
         row.insertCell(4).textContent = task.user;
     });
 }
+displayTaskData("");
