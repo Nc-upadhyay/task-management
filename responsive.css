@@ -1,0 +1,19 @@
+@media (max-width:467px)
+{
+
+*
+{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+
+.outer-div {
+    padding: 0;
+    display: flex;
+    height: 100vh;
+    margin:100px 0px 0px 88px;
+  }
+
+}

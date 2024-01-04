@@ -1,3 +1,11 @@
+
+*
+{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
 body {
   background-color: rebeccapurple;
 
@@ -40,8 +48,8 @@ body {
 .form-popup {
   display: none;
   position: fixed;
-  bottom: 0;
-  right: 15px;
+  bottom: 90;
+  right: 61px;
   border: 3px solid #f1f1f1;
   z-index: 9;
 }
@@ -95,3 +103,80 @@ body {
   opacity: 1;
 }
 
+
+.data-width
+{
+    width:95%!important;
+    color:#191919;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background: #f6f6f6;
+    margin-top:60px;
+    padding:20px 15px 20px 15px;
+}
+
+.data-width h2
+{
+    font-size:25px;
+    font-weight: 600;
+    border-bottom:  2px solid rebeccapurple;
+    padding-bottom: 10px;
+}
+
+.width-6
+{
+  width:50%;
+  float:left;
+}
+
+/* .text-set
+{
+  overflow: auto;
+} */
+
+.text-set span
+{
+  padding:0px 15px 0px 15px;
+  line-height: 2em;
+  font-size:18px;
+  margin-top:10px;
+}
+
+
+.back
+{
+  background: #f6f6f6;
+  width:100%;
+  float:left;
+  margin-inline: auto;
+  margin-top:41px;
+  padding:20px 0px 20px 0px;
+}
+
+
+.card-box
+{
+    margin-left:14px;
+    width: 94%;
+    padding: 10px;
+    box-shadow: rgb();
+    box-shadow: rgb(0 0 0 / 24%) 0px 3px 8px;
+    margin-top:30px;
+    background: #f6f6f6;
+}
+
+.card-box h4
+{
+    text-align: center;
+    color:#554E36;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #fff;
+}
+
+.card-box p
+{
+    padding-top: 10px;
+    font-size: 17px;
+    line-height: 1.5em;
+    text-align: justify;
+}

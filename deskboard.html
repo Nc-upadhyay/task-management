@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="styleSheet" href="deskboard_styles.css" />
+    <link rel="stylesheet" href="deskboard_styles.css" />
+    <link rel="stylesheet" href="responsive.css"/>
 </head>
 
 <body>
@@ -15,6 +15,7 @@
             <button id="addTask" class="open-button">Create</button>
             <hr>
             <div>
+
                 <select id="myList" onchange="favTutorial()" style="float: right; padding: 5px;">
                     <option class="status"> Filter </option>
                     <option class="status"> Todo </option>
@@ -25,6 +26,93 @@
 
                 </select>
             </div>
+
+
+            <!-- changes-->
+
+            <div class="data-width">
+            <h2>Task List</h2>
+                
+                <div class="back">
+
+                 <div class="width-6" style="display:none;">
+                    <div class="text-set">
+                   <span>ID : </span> 
+                </div>
+                
+                </div>
+
+                <div class="width-6" style="display:none;">
+                    <div class="text-set">
+                    <span>3 </span> 
+                    </div>
+                 </div>
+              
+                 <div class="width-6">
+                    <div class="text-set">
+                    <span>Task Name : </span>  
+                    </div>
+                 </div>
+
+                 <div class="width-6">
+                    <div class="text-set">
+                     <span>Data Assign</span>
+                     </div> 
+                  </div>
+                  
+                  <div class="width-6">
+                    <div class="text-set">
+                     <span>Description : </span>
+                     </div> 
+                  </div>
+
+                 <div class="width-6">
+                    <div class="text-set">
+                     <span>jj</span> 
+                     </div>
+                  </div>
+
+                  <div class="width-6">
+                    <div class="text-set">
+                    <span>Status : </span>  
+                    </div>
+                 </div>
+
+                 <div class="width-6">
+                    <div class="text-set">
+                     <span>3 </span>
+                     </div> 
+                  </div>
+
+                  <div class="width-6">
+                    <div class="text-set">
+                    <span>User : </span>  
+                    </div>
+                 </div>
+
+                 <div class="width-6">
+                    <div class="text-set">
+                     <span>3 </span> 
+                     </div>
+                  </div>
+
+
+ 
+                </div>
+
+            </div>
+
+
+             <!-- changes-->
+
+
+             
+
+           
+
+
+
+
             <div id="showDiv">
                 <h2 id="">Task List</h2>
 
@@ -43,6 +131,8 @@
                     </tbody>
                 </table>
             </div>
+
+
 
         </div>
 
