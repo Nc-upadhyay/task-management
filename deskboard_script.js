@@ -144,18 +144,74 @@ function filterTask(status) {
         })
 
 }
-function displayTaskData(data) {
-    var tableBody = document.getElementById("taskTableBody");
-    tableBody.innerHTML = '';
-    const jsonData = '[{"id":1,"taskname":"study","description":"this is study description","status":"todo","user":1},{"id":2,"taskname":"task 2","description":"task 2 description","status":"todo","user":1},{"id":3,"taskname":"task 2","description":"task 2 description","status":"todo","user":1},{"id":52,"taskname":"task 3","description":"task 3 description","status":"todo","user":1},{"id":54,"taskname":"task 4","description":"task 4 description","status":"progress","user":1},{"id":55,"taskname":"task 5","description":"task 5 description","status":"progress","user":1},{"id":56,"taskname":"task 6","description":"task 6 description","status":"progress","user":1},{"id":57,"taskname":"task 7","description":"task 7 description","status":"progress","user":1},{"id":102,"taskname":"task 7","description":"task 7 description","status":"progress","user":1},{"id":103,"taskname":"task 8","description":"task 8 description","status":"progress","user":1},{"id":152,"taskname":"task 7","description":"task 7 description","status":"progress","user":1}]';
-    const dataArray = JSON.parse(jsonData);
-    dataArray.forEach(task => {
-        var row = tableBody.insertRow();
-        row.insertCell(0).textContent = task.id;
-        row.insertCell(1).textContent = task.taskname;
-        row.insertCell(2).textContent = task.description;
-        row.insertCell(3).textContent = task.status;
-        row.insertCell(4).textContent = task.user;
+
+
+// function displayTaskData(data) {
+//     var tableBody = document.getElementById("taskTableBody");
+//     tableBody.innerHTML = '';
+//     const jsonData = '[{"id":1,"taskname":"study","description":"this is study description","status":"todo","user":1},{"id":2,"taskname":"task 2","description":"task 2 description","status":"todo","user":1},{"id":3,"taskname":"task 2","description":"task 2 description","status":"todo","user":1},{"id":52,"taskname":"task 3","description":"task 3 description","status":"todo","user":1},{"id":54,"taskname":"task 4","description":"task 4 description","status":"progress","user":1},{"id":55,"taskname":"task 5","description":"task 5 description","status":"progress","user":1},{"id":56,"taskname":"task 6","description":"task 6 description","status":"progress","user":1},{"id":57,"taskname":"task 7","description":"task 7 description","status":"progress","user":1},{"id":102,"taskname":"task 7","description":"task 7 description","status":"progress","user":1},{"id":103,"taskname":"task 8","description":"task 8 description","status":"progress","user":1},{"id":152,"taskname":"task 7","description":"task 7 description","status":"progress","user":1}]';
+//     const dataArray = JSON.parse(jsonData);
+//     dataArray.forEach(task => {
+//         var row = tableBody.insertRow();
+//         row.insertCell(0).textContent = task.id;
+//         row.insertCell(1).textContent = task.taskname;
+//         row.insertCell(2).textContent = task.description;
+//         row.insertCell(3).textContent = task.status;
+//         row.insertCell(4).textContent = task.user;
+//     });
+// }
+// displayTaskData("");
+
+// Parse JSON data
+
+const jsonData = '[{"id":1,"taskname":"study","description":"this is study description","status":"todo","user":1},{"id":2,"taskname":"task 2","description":"task 2 description","status":"todo","user":1},{"id":3,"taskname":"task 2","description":"task 2 description","status":"todo","user":1},{"id":52,"taskname":"task 3","description":"task 3 description","status":"todo","user":1},{"id":54,"taskname":"task 4","description":"task 4 description","status":"progress","user":1},{"id":55,"taskname":"task 5","description":"task 5 description","status":"progress","user":1},{"id":56,"taskname":"task 6","description":"task 6 description","status":"progress","user":1},{"id":57,"taskname":"task 7","description":"task 7 description","status":"progress","user":1},{"id":102,"taskname":"task 7","description":"task 7 description","status":"progress","user":1},{"id":103,"taskname":"task 8","description":"task 8 description","status":"progress","user":1},{"id":152,"taskname":"task 7","description":"task 7 description","status":"progress","user":1}]';
+const tasks = JSON.parse(jsonData);
+
+// Reference to the card container
+const cardContainer = document.getElementById('data-width');
+
+// Function to create a card
+function createCard(task) {
+    const card = document.createElement('div');
+    card.classList.add('back');
+
+    const taskName = document.createElement('div');
+    taskName.classList.add('width-6');
+    
+    taskName.textContent = task.taskname;
+
+    const taskDescription = document.createElement('div');
+    taskDescription.classList.add('task-description');
+    taskDescription.textContent = task.description;
+
+    const dropdown = document.createElement('div');
+    dropdown.classList.add('dropdown');
+    const select = document.createElement('select');
+    // Add options to the dropdown if needed
+    select.innerHTML = `<option value="todo">Todo</option>
+                        <option value="progress">Progress</option>
+                        <option value="completed">Completed</option>`;
+    dropdown.appendChild(select);
+
+    const deleteButton = document.createElement('button');
+    deleteButton.classList.add('delete-button');
+    deleteButton.textContent = 'Delete';
+
+    // Event listener for the delete button
+    deleteButton.addEventListener('click', () => {
+        // Remove the card when the delete button is clicked
+        card.remove();
     });
+
+    // Append elements to the card
+    card.appendChild(taskName);
+    card.appendChild(taskDescription);
+    card.appendChild(dropdown);
+    card.appendChild(deleteButton);
+
+    // Append the card to the container
+    cardContainer.appendChild(card);
 }
-displayTaskData("");
+
+// Create cards for each task
+tasks.forEach(task => createCard(task));

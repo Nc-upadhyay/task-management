@@ -2,9 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
     <link rel="stylesheet" href="deskboard_styles.css" />
-    <link rel="stylesheet" href="responsive.css"/>
+    <!-- <link rel="stylesheet" href="responsive.css" /> -->
+    <link rel="stylesheet" href="css/responsive.css" />
+    
 </head>
 
 <body>
@@ -16,7 +18,7 @@
             <hr>
             <div>
 
-                <select id="myList" onchange="favTutorial()" style="float: right; padding: 5px;">
+                <select id="myList" onchange="favTutorial()" style="float: right; margin-top:10px; padding: 5px;">
                     <option class="status"> Filter </option>
                     <option class="status"> Todo </option>
                     <option> Progess </option>
@@ -30,10 +32,10 @@
 
             <!-- changes-->
 
-            <div class="data-width">
+             <div class="data-width">
             <h2>Task List</h2>
                 
-                <div class="back">
+                <!-- <div class="back">
 
                  <div class="width-6" style="display:none;">
                     <div class="text-set">
@@ -86,19 +88,27 @@
 
                   <div class="width-6">
                     <div class="text-set">
-                    <span>User : </span>  
+                    <span>
+                        <select id="drop-down">
+                            <option>Select</option>
+                            <option>Hello</option>
+                            <option>Hello</option>
+                            <option>Hello</option>
+                            <option>Hello</option>
+                        </select>
+                    </span>  
                     </div>
-                 </div>
+                 </div> -->
 
-                 <div class="width-6">
+                 <!-- <div class="width-6">
                     <div class="text-set">
                      <span>3 </span> 
                      </div>
-                  </div>
+                  </div> -->
 
 
  
-                </div>
+                <!-- </div> -->
 
             </div>
 
@@ -140,7 +150,7 @@
         <div class="form-popup" id="myForm">
             <form id="addTaskForm" class="form-container">
                 <h1>Task</h1>
-
+            <br>
                 <label for="taskname"><b>Task Name</b></label>
                 <br>
                 <input type="text" id="taskname" placeholder="Task" name="taskname" required style="width: 270px;">
@@ -148,9 +158,10 @@
                 <label for="psw"><b>Task Description</b></label>
                 <br>
 
-                <input type="text" id="description" placeholder="Description" name="psw" required
-                    style="height: 120px ; width: 270px;">
+                <textarea id="description" placeholder="Description" name="psw" required
+                style="height: 120px ; width: 270px;"></textarea>
 
+                
                 <button  id="savebtn" class="btn" >Save</button>
                 <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
             </form>

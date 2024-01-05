@@ -1,0 +1,57 @@
+@media (max-width:467px)
+{
+
+*
+{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+
+.outer-div {
+  
+    width: 100%;
+    padding: 11px;
+    display: flex;
+    height: 100vh;
+    margin: 54px 0px 0px 0px;
+
+  }
+
+  
+
+#myList
+{
+  margin-top: 15px;
+    float: right;
+    padding: 5px;
+}
+
+.text-set span {
+  padding: 0px 15px 0px 15px;
+  line-height: 1.3em;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.form-popup {
+  display: none;
+  top:66px;
+  position: fixed;
+  bottom: 90;
+  right: 40px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.data-width {
+  width: 100%!important;
+  color: #191919;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background: #f6f6f6;
+  margin-top: 60px;
+  padding: 20px 15px 20px 15px;
+}
+
+}
