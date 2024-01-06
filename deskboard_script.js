@@ -172,17 +172,56 @@ const cardContainer = document.getElementById('data-width');
 
 // Function to create a card
 function createCard(task) {
-    const card = document.createElement('div');
-    card.classList.add('back');
+    const back = document.createElement('div');
+    back.classList.add('back');
 
     const taskName = document.createElement('div');
     taskName.classList.add('width-6');
-    
-    taskName.textContent = task.taskname;
+    const taskName2 = document.createElement('div');
+    taskName2.classList.add('text-set');
+    const para = document.createElement('span');
+    para.textContent = "Task Name :";
+    taskName2.appendChild(para);
+    taskName.appendChild(taskName2);
+
+
+    const taskNamed = document.createElement('div');
+    taskNamed.classList.add('width-6');
+    const taskNamed2 = document.createElement('div');
+    taskNamed2.classList.add('text-set');
+    const parad = document.createElement('span');
+    parad.textContent = task.taskname;
+    taskNamed2.appendChild(parad);
+    taskNamed.appendChild(taskNamed2);
+
 
     const taskDescription = document.createElement('div');
-    taskDescription.classList.add('task-description');
-    taskDescription.textContent = task.description;
+    taskDescription.classList.add('width-6');
+    const taskDescription2 = document.createElement('div');
+    taskDescription2.classList.add('text-set');
+    const desc = document.createElement('span');
+    desc.textContent = "Description : ";
+    taskDescription2.appendChild(desc);
+    taskDescription.appendChild(taskDescription2);
+
+    const taskDescriptiond = document.createElement('div');
+    taskDescriptiond.classList.add('width-6');
+    const taskDescriptiond2 = document.createElement('div');
+    taskDescriptiond2.classList.add('text-set');
+    const descd = document.createElement('span');
+    descd.textContent = task.description;
+    taskDescriptiond2.appendChild(descd);
+    taskDescriptiond.appendChild(taskDescriptiond2);
+
+
+    // const taskDescription = document.createElement('div');
+    // taskDescription.classList.add('task-description');
+    // taskDescription.textContent = task.description;
+
+
+    
+
+
 
     const dropdown = document.createElement('div');
     dropdown.classList.add('dropdown');
@@ -200,17 +239,19 @@ function createCard(task) {
     // Event listener for the delete button
     deleteButton.addEventListener('click', () => {
         // Remove the card when the delete button is clicked
-        card.remove();
+        back.remove();
     });
 
     // Append elements to the card
-    card.appendChild(taskName);
-    card.appendChild(taskDescription);
-    card.appendChild(dropdown);
-    card.appendChild(deleteButton);
+    back.appendChild(taskName);
+    back.appendChild(taskNamed);
+    back.appendChild(taskDescription);
+    back.appendChild(taskDescriptiond);
+    back.appendChild(dropdown);
+    back.appendChild(deleteButton);
 
     // Append the card to the container
-    cardContainer.appendChild(card);
+    cardContainer.appendChild(back);
 }
 
 // Create cards for each task

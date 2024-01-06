@@ -104,7 +104,7 @@ body {
 }
 
 
-.data-width
+#data-width
 {
     width:100%!important;
     color:#191919;
@@ -115,7 +115,7 @@ body {
     padding:20px 15px 20px 15px;
 }
 
-.data-width h2
+#data-width h2
 {
     font-size:25px;
     font-weight: 600;
@@ -137,7 +137,7 @@ body {
 .text-set span
 {
   padding:0px 15px 0px 15px;
-  line-height: 1.3em;
+  line-height: 1.5em;
   font-size:18px;
   margin-top:10px;
 }
@@ -168,6 +168,18 @@ body {
   outline: none;
 }
 
+
+.delete-button
+{
+  background: red; 
+  border:1px solid red; 
+  color:#fff;
+  float:right;
+  margin-top:10px;
+  margin-right:50px;
+  padding:5px;
+  font-size:15px;
+}
 
 /* #showDiv
 {
