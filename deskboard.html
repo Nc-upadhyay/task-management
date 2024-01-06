@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="deskboard_styles.css" />
     <!-- <link rel="stylesheet" href="responsive.css" /> -->
     <link rel="stylesheet" href="css/responsive.css" />
-    
+
 </head>
 
 <body>
@@ -32,117 +33,11 @@
 
             <!-- changes-->
 
-             <div id="data-width">
-            <h2>Task List</h2>
-                
-                <!-- <div class="back">
+            <div id="data-width">
+                <h2>Task List</h2>
 
-                 <div class="width-6" style="display:none;">
-                    <div class="text-set">
-                   <span>ID : </span> 
-                </div>
-                
-                </div>
-
-                <div class="width-6" style="display:none;">
-                    <div class="text-set">
-                    <span>3 </span> 
-                    </div>
-                 </div>
-              
-                 <div class="width-6">
-                    <div class="text-set">
-                    <span>Task Name : </span>  
-                    </div>
-                 </div>
-
-                 <div class="width-6">
-                    <div class="text-set">
-                     <span>Data Assign</span>
-                     </div> 
-                  </div>
-                  
-                  <div class="width-6">
-                    <div class="text-set">
-                     <span>Description : </span>
-                     </div> 
-                  </div>
-
-                 <div class="width-6">
-                    <div class="text-set">
-                     <span>jj</span> 
-                     </div>
-                  </div>
-
-                  <div class="width-6">
-                    <div class="text-set">
-                    <span>Status : </span>  
-                    </div>
-                 </div>
-
-                 <div class="width-6">
-                    <div class="text-set">
-                     <span>3 </span>
-                     </div> 
-                  </div>
-
-                  <div class="width-6">
-                    <div class="text-set">
-                    <span>
-                        <select id="drop-down">
-                            <option>Select</option>
-                            <option>Hello</option>
-                            <option>Hello</option>
-                            <option>Hello</option>
-                            <option>Hello</option>
-                        </select>
-                    </span>  
-                    </div>
-                 </div> -->
-
-                 <!-- <div class="width-6">
-                    <div class="text-set">
-                     <span>3 </span> 
-                     </div>
-                  </div> -->
-
-
- 
-                <!-- </div> -->
 
             </div>
-
-
-             <!-- changes-->
-
-
-             
-
-           
-
-
-
-
-            <div id="showDiv">
-                <h2 id="">Task List</h2>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Task Name</th>
-                            <th>Description</th>
-                            <th>Status</th>
-                            <th>User</th>
-                        </tr>
-                    </thead>
-                    <tbody id="taskTableBody">
-                        <!-- Task data will be inserted here dynamically using JavaScript -->
-                    </tbody>
-                </table>
-            </div>
-
-
 
         </div>
 
@@ -150,7 +45,7 @@
         <div class="form-popup" id="myForm">
             <form id="addTaskForm" class="form-container">
                 <h1>Task</h1>
-            <br>
+                <br>
                 <label for="taskname"><b>Task Name</b></label>
                 <br>
                 <input type="text" id="taskname" placeholder="Task" name="taskname" required style="width: 270px;">
@@ -159,10 +54,10 @@
                 <br>
 
                 <textarea id="description" placeholder="Description" name="psw" required
-                style="height: 120px ; width: 270px;"></textarea>
+                    style="height: 120px ; width: 270px;"></textarea>
 
-                
-                <button  id="savebtn" class="btn" >Save</button>
+
+                <button id="savebtn" class="btn">Save</button>
                 <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
             </form>
         </div>
